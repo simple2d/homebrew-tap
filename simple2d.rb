@@ -5,10 +5,9 @@ class Simple2d < Formula
   sha256 "e63bdf80569d67611ea2a8c22c86c4af9e7983fe2eadc40ae67bbb419ae5310c"
 
   depends_on "sdl2"
-  depends_on "sdl2_image"
-  depends_on "sdl2_mixer"
+  depends_on "sdl2_image" => %w{with-jpeg with-libpng with-libtiff with-webp}
+  depends_on "sdl2_mixer" => %w{with-flac with-smpeg2 with-libvorbis}
   depends_on "sdl2_ttf"
-  depends_on "smpeg2"
 
   def install
     system "make"
