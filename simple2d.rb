@@ -1,8 +1,8 @@
 class Simple2d < Formula
   desc "Simple, open-source 2D graphics for everyone"
   homepage "http://simple2d.com"
-  url "https://github.com/simple2d/simple2d/archive/v0.2.1.tar.gz"
-  sha256 "001a82f4560c57bff9a756bed6cda1481a7db10391fe0a8fc3c6c7ffe3ed6db7"
+  url "https://github.com/simple2d/simple2d/archive/v0.3.0.tar.gz"
+  sha256 "a39955508c14d278e812b447ca4fed46ad3e3c5a36d5e0654a01eff878a171e3"
 
   depends_on "sdl2"
   depends_on "sdl2_image"
