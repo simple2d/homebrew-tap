@@ -8,7 +8,8 @@ class Simple2d < Formula
 
   depends_on "sdl2"
   depends_on "sdl2_image"
-  depends_on "sdl2_mixer" => %w[with-flac with-smpeg2]
+  depends_on "mpg123"
+  depends_on "sdl2_mixer" => %w[with-flac]
   depends_on "sdl2_ttf"
 
   resource "frameworks" do
