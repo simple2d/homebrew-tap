@@ -1,20 +1,20 @@
 class Simple2d < Formula
   desc "Simple, open-source 2D graphics for everyone"
   homepage "http://simple2d.com"
-  url "https://github.com/simple2d/simple2d/archive/v0.9.0.tar.gz"
-  sha256 "c03497b47a74dd220be8ff3aeedfa42bce36babd23df582281bf0f0c8b48ef0f"
+  version = "1.0.0"
+  url "https://github.com/simple2d/simple2d/archive/v#{version}.tar.gz"
+  sha256 "8a08763f0626a03c303392887a0c1641c1b4fb5af1be8645904e0274d2acd335"
 
   head "https://github.com/simple2d/simple2d.git"
 
   depends_on "sdl2"
   depends_on "sdl2_image"
-  depends_on "mpg123"
-  depends_on "sdl2_mixer" => %w[with-flac]
+  depends_on "sdl2_mixer" => %w[with-flac with-mpg123]
   depends_on "sdl2_ttf"
 
   resource "frameworks" do
-    url "https://github.com/simple2d/simple2d/releases/download/v0.9.0/simple2d-apple-frameworks-0.9.0.zip"
-    sha256 "9b270d3c1fc5baa490e15087c6fc431ce97872264dcf503ae005092124858b2f"
+    url "https://github.com/simple2d/simple2d/releases/download/v#{version}/simple2d-apple-frameworks-#{version}.zip"
+    sha256 "a5db2a575051d758af0fe333cd8024a283d9dddb313571a354d03d2a7a5b14ac"
   end
 
   def install
@@ -24,6 +24,6 @@ class Simple2d < Formula
   end
 
   test do
-    # do something here
+    assert_equal version, shell_output("#{bin}/simple2d -v").strip
   end
 end
