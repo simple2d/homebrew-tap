@@ -1,9 +1,9 @@
 class Simple2d < Formula
   desc "Simple, open-source 2D graphics for everyone"
   homepage "http://simple2d.com"
-  version = "1.0.0"
+  version = "1.0.1"
   url "https://github.com/simple2d/simple2d/archive/v#{version}.tar.gz"
-  sha256 "8a08763f0626a03c303392887a0c1641c1b4fb5af1be8645904e0274d2acd335"
+  sha256 "0e58d45876ff3acdb856f525b1749d0c3612a51498bbdf2de797d6802e9cf6fa"
 
   head "https://github.com/simple2d/simple2d.git"
 
@@ -14,7 +14,7 @@ class Simple2d < Formula
 
   resource "frameworks" do
     url "https://github.com/simple2d/simple2d/releases/download/v#{version}/simple2d-apple-frameworks-#{version}.zip"
-    sha256 "a5db2a575051d758af0fe333cd8024a283d9dddb313571a354d03d2a7a5b14ac"
+    sha256 "5228dbdbd791b42d2e3d117ec48a5eb7f14da97d9f880c3ff6ef6e143d551ccb"
   end
 
   def install
